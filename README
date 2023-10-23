@@ -1,6 +1,7 @@
 
 TWMApp is written by Roberto Rodriguez Jr <hardkorebob@gmail.com> in 2023
 TinyWM is written by Nick Welch <nick@incise.org> in 2005 & 2011.
+http://incise.org/tinywm.html
 
 Micro window manager implemented in Python3 in as few lines as possible, 
 without being obfuscated or entirely useless. It allows you
@@ -19,3 +20,11 @@ Usage:
   Mod4+Button1, drag: interactive window move
   Mod4+Button3, drag: interactive window resize [Right-Click]
   Mod4+Tab:           raise focused window
+
+Suggested Test Environment:
+  
+  #$HOME/.xinitrc
+  xterm &
+  while true; do sleep 1000000; done
+  
+  $ startx
