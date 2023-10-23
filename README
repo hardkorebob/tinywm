@@ -1,7 +1,6 @@
 
-# TWMApp is written by Roberto Rodriguez Jr <hardkorebob@gmail.com> in 2023
-# TinyWM is written by Nick Welch <nick@incise.org> in 2005 & 2011.
-# This software is in the public domain and is provided AS IS, with NO WARRANTY.
+TWMApp is written by Roberto Rodriguez Jr <hardkorebob@gmail.com> in 2023
+TinyWM is written by Nick Welch <nick@incise.org> in 2005 & 2011.
 
 Micro window manager implemented in Python3 in as few lines as possible, 
 without being obfuscated or entirely useless. It allows you
