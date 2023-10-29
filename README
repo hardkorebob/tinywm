@@ -11,6 +11,7 @@ Depends:
   python-xlib
   xterm
   xsetroot
+  xinit
 
 Usage:
 
