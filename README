@@ -36,6 +36,7 @@ Recommended Play Env:
   $ mv z /usr/local/bin
   #$HOME/.xinitrc
   xsetroot -solid dimgray
+  editor &
   exec z
 
   $ startx
