@@ -1,18 +1,39 @@
 #!/usr/bin/env python3
-# TWMApp is written by Roberto Rodriguez Jr <hardkorebob@gmail.com> in 2023
-# TinyWM is written by Nick Welch <nick@incise.org> in 2005 & 2011.
-# This software is in the public domain and is provided AS IS, with NO WARRANTY.
+# Written by Roberto Rodriguez Jr & ChatGPT
+# hardkorebob@gmail.com
+# Zettlekastenrhok v.999 [r.t.h.a.d.e]
+# Rapid Text Handling And Dev Environment
+# ratde.py: Rapid App & Text Dev Env
+# codwolf_Software HARDKOREBOB.github.io
+# Warranty: FREE WARRANTY 4 LIFE
+# License: This software is provided under PRIVATE LICENSE
+
+
 
 import tkinter as tk
 import threading
-
 from Xlib.display import Display
 from Xlib import X, XK
 
-class TWMApp:
 
-    # [hardkorebob]
+
+class ZApp:
+
+
     def __init__(self, root):
+        self.startWM()
+        self.root =  tk.Frame(root, bg="#696969")
+        self.root.grid(row=0,column=0, sticky='nsew')
+        self.root.grid_rowconfigure(0, weight=1)
+        self.p = tk.PhotoImage(file="/usr/local/bin/py.png") 
+        self.label = tk.Label(self.root, image=self.p, bg="#696969")
+        self.label.grid(row=0, column=0, sticky='nsew')
+        self.root.bind_all("<Control-q>", self.quitwm)
+    
+    def quitwm(self, event=None):
+        self.root.quit()
+
+    def startWM(self):
         self.tinywm = TinyWM()
         self.tinywm_thread = threading.Thread(target=self.tinywm.run)
         self.tinywm_thread.daemon = True
@@ -24,7 +45,6 @@ class TinyWM:
         self.dpy = Display()
         self.start = None
 
-    # [hardkorebob] (Tab and Mod4)
     def run(self):
         self.dpy.screen().root.grab_key(self.dpy.keysym_to_keycode(XK.string_to_keysym("Tab")), X.Mod4Mask, 1, X.GrabModeAsync, X.GrabModeAsync)
         self.dpy.screen().root.grab_button(1, X.Mod4Mask, 1, X.ButtonPressMask | X.ButtonReleaseMask | X.PointerMotionMask, X.GrabModeAsync, X.GrabModeAsync, X.NONE, X.NONE)
@@ -48,11 +68,11 @@ class TinyWM:
             elif ev.type == X.ButtonRelease:
                 self.start = None
             
+
 if __name__ == "__main__":
     root = tk.Tk()
     root.configure(background="#000")
-    app = TWMApp(root)
+    app = ZApp(root)
     root.mainloop()
 
-
-
+#$%&*^ 02:28 cat /usr/local/bin/z
