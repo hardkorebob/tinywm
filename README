@@ -7,6 +7,10 @@ Micro window manager implemented in Python3 in as few lines as possible,
 without being obfuscated or entirely useless. It allows you to move, resize, focus (sloppy), and raise windows. 
 To serve as a quick example of some window manager programming basics.
 
+Depends:
+  python-xlib
+  xterm
+  xsetroot
 
 Usage:
 
@@ -27,9 +31,11 @@ Suggested Test Environment:
   
   $ startx
 
-Recommended Env:
-$ mv z /usr/local/bin
-#$HOME/.xinitrc
-xsetroot -solid dimgray
-exec z
-$ startx
+Recommended Play Env:
+
+  $ mv z /usr/local/bin
+  #$HOME/.xinitrc
+  xsetroot -solid dimgray
+  exec z
+
+  $ startx
