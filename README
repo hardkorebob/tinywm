@@ -7,9 +7,6 @@ Micro window manager implemented in Python3 in as few lines as possible,
 without being obfuscated or entirely useless. It allows you to move, resize, focus (sloppy), and raise windows. 
 To serve as a quick example of some window manager programming basics.
 
-Files:
-
-  tinywm.py
 
 Usage:
 
@@ -19,11 +16,20 @@ Usage:
   Mod4+Button1, drag: interactive window move
   Mod4+Button3, drag: interactive window resize [Right-Click]
   Mod4+Tab:           raise focused window
+  Ctrl-q: exit (mouse over image)
 
 Suggested Test Environment:
   
   #$HOME/.xinitrc
+  xsetroot -solid dimgray
   xterm &
   while true; do sleep 1000000; done
   
   $ startx
+
+Recommended Env:
+$ mv z /usr/local/bin
+#$HOME/.xinitrc
+xsetroot -solid dimgray
+exec z
+$ startx
