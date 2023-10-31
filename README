@@ -1,6 +1,6 @@
 
-TWMApp is written by Roberto Rodriguez Jr <hardkorebob@gmail.com> in 2023.
-TinyWM is written by Nick Welch <nick@incise.org> in 2005 & 2011.
+TWMApp is written by Roberto Rodriguez Jr & ChatGPT <hardkorebob@gmail.com> in 2023.
+TinyWM was written by Nick Welch <nick@incise.org> in 2005 & 2011.
 http://incise.org/tinywm.html
 
 Micro window manager implemented in Python3 in as few lines as possible, 
@@ -15,13 +15,13 @@ Depends:
 
 Usage:
 
-  Mod4 = Super [Command] 
+  Mod4 = Super [Command(Mac)] 
   Focus follows pointer.
 
   Mod4+Button1, drag: interactive window move
   Mod4+Button3, drag: interactive window resize [Right-Click]
   Mod4+Tab:           raise focused window
-  Ctrl-q: exit (mouse over image)
+  Ctrl-q: exit with [mouse over] image
 
 Suggested Test Environment:
   
@@ -31,13 +31,13 @@ Suggested Test Environment:
   while true; do sleep 1000000; done
   
   $ startx
+  $_python3 twmapp.py & 
 
 Recommended Play Env:
 
-  $ mv z /usr/local/bin
+  $ mv twmapp.py /usr/local/bin
   #$HOME/.xinitrc
   xsetroot -solid dimgray
-  editor &
-  exec z
+  exec twmapp.py
 
   $ startx
