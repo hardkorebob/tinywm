@@ -1,14 +1,6 @@
 #!/usr/bin/env python3
 # Written by Roberto Rodriguez Jr & ChatGPT
 # hardkorebob@gmail.com
-# Zettlekastenrhok v.999 [r.t.h.a.d.e]
-# Rapid Text Handling And Dev Environment
-# ratde.py: Rapid App & Text Dev Env
-# codwolf_Software HARDKOREBOB.github.io
-# Warranty: FREE WARRANTY 4 LIFE
-# License: This software is provided under PRIVATE LICENSE
-
-
 
 import tkinter as tk
 import threading
@@ -16,9 +8,7 @@ from Xlib.display import Display
 from Xlib import X, XK
 
 
-
 class ZApp:
-
 
     def __init__(self, root):
         self.startWM()
@@ -75,4 +65,4 @@ if __name__ == "__main__":
     app = ZApp(root)
     root.mainloop()
 
-#$%&*^ 02:28 cat /usr/local/bin/z
+#$%&*^ 02:28 cat /usr/local/bin/twmapp.py #allerrorsmatter
