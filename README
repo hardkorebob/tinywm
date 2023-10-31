@@ -21,23 +21,26 @@ Usage:
   Mod4+Button1, drag: interactive window move
   Mod4+Button3, drag: interactive window resize [Right-Click]
   Mod4+Tab:           raise focused window
-  Ctrl-q: exit with [pointer over] image
+  Ctrl-q: exit: [pointer over] Python logo
 
 Suggested Test Environment:
   
   #$HOME/.xinitrc
-  xsetroot -solid dimgray
-  xterm &
-  while true; do sleep 1000000; done
+    xsetroot -solid dimgray
+    xterm &
+    while true; do sleep 1000000; done
   
   $ startx
-  $_python3 twmapp.py & 
+  $_python3 /path/to/twmapp.py &
+
 
 Recommended Play Env:
 
   $ mv twmapp.py /usr/local/bin
+  $ pkill X
+
   #$HOME/.xinitrc
-  xsetroot -solid dimgray
-  exec twmapp.py
+    xsetroot -solid dimgray
+    exec twmapp.py
 
   $ startx
