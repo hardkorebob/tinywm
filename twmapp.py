@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Written by Roberto Rodriguez Jr & ChatGPT
 # hardkorebob@gmail.com
+# https://hardkorebob.github.io
 
 import tkinter as tk
 import threading
